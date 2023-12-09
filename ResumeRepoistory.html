@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(92, 24, 202, 0.521);
+            background-image: url("resume.jpg");
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 30px 0px 0px 0px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-bottom: 200px;
+        }
+
+        form {
+
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="resume">Select Resume:</label>
+        <input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx">
+        <button type="submit">Upload Resume</button>
+    </form>
+
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase ,ref ,get , Child  } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyDaQl_7i4irLU-WyK13WBp9s-m7sei7lck",
+          authDomain: "login-with-firebase-data-7759a.firebaseapp.com",
+          projectId: "login-with-firebase-data-7759a",
+          storageBucket: "login-with-firebase-data-7759a.appspot.com",
+          messagingSenderId: "1007620455619",
+          appId: "1:1007620455619:web:16967257ed414dff4e3676"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        document.getElementById("Upload resume").addEventListener('click',function(e){
+         
+
+        })
+      </script>
+</body>
+
+</html>

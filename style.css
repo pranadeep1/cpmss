@@ -1,0 +1,61 @@
+h1{
+    margin: 10vh;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff6f6; /* Navbar background color */
+    overflow: hidden;
+    width: 100%; /* Set the width to 100% */
+}
+
+li.nav-item {
+    float: left;
+}
+
+a.nav-link {
+    display: block;
+    color: white; /* Navbar text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    background-color: #555; /* Navbar background color on hover */
+}
+body{
+    margin: 0%;
+    background-image: url('https://th.bing.com/th/id/OIP.mm2o50PCGeJ88six73EnCAHaEo?rs=1&pid=ImgDetMain');
+    background-size: cover;
+    height:98vh;
+}
+.navbar-brand,.nav-item a{
+    color: wheat;
+}
+.nav-item a:hover{
+    background-color: black;
+    color: white;
+}
+
+.custom-card:hover{ 
+    box-shadow: 1px 1px 4px rgba(236, 233, 233, 0.7);
+}
+.fa-user{
+    font-size: 3rem;
+    border-radius: 50%;
+    padding: 18px;
+    width:fit-content;
+    box-shadow: 1px 1px 3px rgba(241, 237, 237, 0.7);
+}
+ul{
+    color:black;
+}

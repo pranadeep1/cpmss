@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #studentList {
+            margin-top: 20px;
+        }
+         body{
+            background-image: url('https://media.istockphoto.com/id/1326464249/vector/big-data-flow-technology-and-science-vector-background-tech-abstraction-with-lines.jpg?s=612x612&w=0&k=20&c=GyZte9QP8SMHWJ8c-v2jhCtau7GSlJYvBA1Dct0AcSE=');
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="studentForm">
+        <label for="name">Student Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="grade">Grade:</label>
+        <select name="grade" id="grade" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+            <label for ="languages learnt">languages learnt:</label>
+                <input type="text" name="languages" id="languages" required>
+
+                <label for="internship experiance">Internship experiance:</label>
+                <select name = " experiance" id="experiance"required>
+                 <option value = " 3 months" > 3 months </option>
+                 <option value = " 6 months" > 6 months </option>
+                    <option value = " >1 year "> >1 year </option>
+                
+                </select>
+            
+        <style>
+            
+        </style>
+
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <div id="studentList"></div>
+
+    <script>
+        function addStudent() {
+            var name = document.getElementById('name').value;
+            var grade = document.getElementById('grade').value;
+            var languageslearnt = document.getElementById('languages').value;
+            var internshipexperiance = document.getElementById('experiance').value;
+
+
+
+            // Create a new student object
+            var student = {
+                name: name,
+                grade: grade,
+                languageslearnt: languageslearnt,
+                experiance : experiance,
+            };
+
+            // Add the student to the list
+            addStudentToList(student);
+
+            // Clear the form fields
+            document.getElementById('name').value = '';
+            document.getElementById('grade').value = '';
+            document.getElementById('languages').value = '';
+            document.getElementById('experiance').value = '';
+        }
+
+        function addStudentToList(student) {
+            var studentList = document.getElementById('studentList');
+
+            // Create a new paragraph element
+            var newStudent = document.createElement('p');
+
+            // Set the text content of the paragraph
+            newStudent.textContent = 'Name: ' + student.name + ', Grade: ' + student.grade + ', languages:'+student.languageslearnt+', experiance:'+student.experiance ;
+            // Append the new paragraph to the studentList div
+            studentList.appendChild(newStudent);
+        }
+    </script>
+
+</body>
+</html>
